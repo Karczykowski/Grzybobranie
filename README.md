@@ -1,1 +1,1 @@
-# Projekt Edukacjny dla klas podstawowych 4-6
+# Projekt gier edukacjnych dla klas podstawowych 4-6
