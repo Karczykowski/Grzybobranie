@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Grzybobranie
+namespace Grzybobranie.Player
 {
     public class PlayerMovement : MonoBehaviour
     {
