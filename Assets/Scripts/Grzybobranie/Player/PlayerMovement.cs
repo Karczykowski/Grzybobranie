@@ -6,9 +6,17 @@ namespace Grzybobranie.Player
 {
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField] private float moveSpeed;
+        [SerializeField] private float moveSpeed = 5;
+        private float currentMoveSpeed;
         [SerializeField] private Rigidbody2D rb;
         private Vector2 movement;
+        private bool isSlowed;
+
+        private void Start()
+        {
+            isSlowed = false;
+            currentMoveSpeed = moveSpeed;
+        }
 
         private void Update()
         {
@@ -17,7 +25,31 @@ namespace Grzybobranie.Player
         }
         private void FixedUpdate()
         {
-            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+            rb.MovePosition(rb.position + movement * currentMoveSpeed * Time.fixedDeltaTime);
+        }
+
+        public float GetCurrentMoveSpeed()
+        {
+            return currentMoveSpeed;
+        }
+        public void SetCurrentMoveSpeed(float currentMoveSpeed)
+        {
+            this.currentMoveSpeed = currentMoveSpeed;
+        }
+
+        public float GetMoveSpeed()
+        {
+            return moveSpeed;
+        }
+
+        public bool GetIsSlowed()
+        {
+            return isSlowed;
+        }
+
+        public void SetIsSlowed(bool isSlowed)
+        {
+            this.isSlowed = isSlowed;
         }
     }
 
