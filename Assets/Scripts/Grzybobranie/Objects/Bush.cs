@@ -7,7 +7,7 @@ namespace Grzybobranie.Objects
     public class Bush : MonoBehaviour
     {
         [SerializeField] private float slowAmount = 0.1f;
-        [SerializeField] private Player.PlayerMovement playerMovement;
+        private Player.PlayerMovement playerMovement;
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -31,6 +31,11 @@ namespace Grzybobranie.Objects
                     playerMovement.SetIsSlowed(false);
                 }
             }
+        }
+
+        public void SetPlayerMovement(Player.PlayerMovement playerMovement)
+        {
+            this.playerMovement = playerMovement;
         }
     }
 
