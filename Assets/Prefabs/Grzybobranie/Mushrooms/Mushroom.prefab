@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2871673918638659267}
   - component: {fileID: 8978262234954890232}
   - component: {fileID: 2692981755627142341}
-  - component: {fileID: -7093262269814441842}
+  - component: {fileID: 3784457198456386621}
   m_Layer: 6
   m_Name: Mushroom
   m_TagString: Untagged
@@ -134,7 +134,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-7093262269814441842
+--- !u!114 &3784457198456386621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,3 +147,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   previewSprite: {fileID: 0}
+  IsEdible: 0
+  edibleIcon: {fileID: 3941829082584785946, guid: 7ea679122e5c5a743818f6afaf868271, type: 3}
+  uneatableIcon: {fileID: -4555525171308805332, guid: faa6de827756529489d2de45335d2198, type: 3}
+  IsProtected: 0
+  protectedIcon: {fileID: 334647599656922103, guid: 0d34932dd5a8cdb48a93aa4d57775815, type: 3}
+  IsPoisonous: 0
+  poisonousIcon: {fileID: -3301876238194629004, guid: a69775b266b81f645855239387e015e3, type: 3}

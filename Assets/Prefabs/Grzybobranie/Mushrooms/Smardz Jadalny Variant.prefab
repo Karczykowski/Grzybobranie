@@ -9,6 +9,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -7093262269814441842, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
+      propertyPath: IsProtected
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7093262269814441842, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: previewSprite
       value: 
       objectReference: {fileID: 415512601127897509, guid: e15283e844661d144bb1dfc9bc90295c, type: 3}
@@ -52,6 +56,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3784457198456386621, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
+      propertyPath: IsProtected
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784457198456386621, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
+      propertyPath: isProtected
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3784457198456386621, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
+      propertyPath: previewSprite
+      value: 
+      objectReference: {fileID: 415512601127897509, guid: e15283e844661d144bb1dfc9bc90295c, type: 3}
     - target: {fileID: 5949010414359704688, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: m_Name
       value: Smardz Jadalny Variant

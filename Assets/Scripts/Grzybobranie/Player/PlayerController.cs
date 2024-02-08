@@ -25,6 +25,7 @@ namespace Grzybobranie.Player
 
             if (closestShroom != null && (!isPreviewUp || previousShroom != closestShroom))
             {
+                mushroomPreview.DeactivatePreview();
                 mushroomPreview.ActivatePreview(closestShroom.gameObject);
                 previousShroom = closestShroom;
                 isPreviewUp = true;

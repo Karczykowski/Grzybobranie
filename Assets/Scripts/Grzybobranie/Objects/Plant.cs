@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Grzybobranie.Objects
 {
-    public class Tree : MonoBehaviour
+    public class Plant : MonoBehaviour
     {
         public void GenerateMushroomsUnderTree(GameObject mushroom, float spawnRadius, Transform mushroomParent)
         {

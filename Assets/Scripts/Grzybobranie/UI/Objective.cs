@@ -11,10 +11,6 @@ namespace Grzybobranie.UI
         [SerializeField] private List<string> mushrooms;
 
         private string mushroomName;
-        void Start()
-        {
-            GenerateObjective();
-        }
 
         public string GetMushroomName()
         {

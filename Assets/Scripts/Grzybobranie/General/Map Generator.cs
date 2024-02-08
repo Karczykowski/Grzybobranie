@@ -23,9 +23,11 @@ namespace Grzybobranie.General
         [SerializeField] private float yBoundry;
         [SerializeField] private Player.PlayerMovement playerMovement;
 
+        [SerializeField] private UI.Objective objective;
         void Start()
         {
             GenerateTrees();
+            objective.GenerateObjective();
             GenerateBushes();
         }
 
@@ -50,7 +52,7 @@ namespace Grzybobranie.General
         private void GenerateMushrooms(GameObject tree)
         {
             int mushroomIndex = Random.Range(0, mushrooms.Length);
-            tree.GetComponent<Objects.Tree>().GenerateMushroomsUnderTree(mushrooms[mushroomIndex], mushroomSpawnRadius, mushroomParent);
+            tree.GetComponent<Objects.Plant>().GenerateMushroomsUnderTree(mushrooms[mushroomIndex], mushroomSpawnRadius, mushroomParent);
         }
 
         private bool isPointInCollider(Vector2 point)
