@@ -8,16 +8,29 @@ namespace Grzybobranie.UI
     public class Objective : MonoBehaviour
     {
         [SerializeField] private TextMeshProUGUI objectiveText;
+        [SerializeField] private TextMeshProUGUI pointsText;
+        [SerializeField] private GameObject levelCompletePanel;
         [SerializeField] private List<string> mushrooms;
+        private int mushroomsPicked;
+        [SerializeField] private int pointRequired;
+        [SerializeField] Player.PlayerMovement playerMovement;
+        [SerializeField] General.MapGenerator mapGenerator;
+        [SerializeField] MushroomPreview mushroomPreview;
+        public bool gamePaused;
 
         private string mushroomName;
 
+        private void Start()
+        {
+            mushroomsPicked = 0;
+            gamePaused = false;
+        }
         public string GetMushroomName()
         {
             return mushroomName;
         }
 
-        public void GenerateObjective()
+        public void GenerateObjective(string previousShroom = "")
         {
             if (mushrooms.Count == 0)
                 return;
@@ -34,8 +47,42 @@ namespace Grzybobranie.UI
                     Debug.Log("Blad znajdywania celu");
                     break;
                 }
-            } while (targetMushroom == null);
+            } while (targetMushroom == null || previousShroom.Contains(mushroomName));
             objectiveText.text = "Znajdü: " + mushroomName;
+        }
+
+        public void IncreateMushroomPicked(int count = 1)
+        {
+            mushroomsPicked += count;
+            UpdatePointText();
+        }
+
+        public void UpdatePointText()
+        {
+            pointsText.text = "Punkty: " + mushroomsPicked;
+            if(mushroomsPicked == pointRequired)
+            {
+                FinishLevel();
+            }
+        }
+
+        public void FinishLevel()
+        {
+            gamePaused = true;
+            levelCompletePanel.SetActive(true);
+            playerMovement.DisablePlayerMovement();
+            objectiveText.text = "";
+            mushroomPreview.DeactivatePreview();
+        }
+
+        public void RestartGame()
+        {
+            levelCompletePanel.SetActive(false);
+            playerMovement.EnablePlayerMovement();
+            mushroomsPicked = 0;
+            UpdatePointText();
+            mapGenerator.GenerateMap();
+            gamePaused = false;
         }
     }
 }

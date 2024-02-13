@@ -26,6 +26,13 @@ namespace Grzybobranie.General
         [SerializeField] private UI.Objective objective;
         void Start()
         {
+            GenerateMap();
+        }
+
+        public void GenerateMap()
+        {
+            ClearMap();
+            playerMovement.ResetPlayerPosition();
             GenerateTrees();
             objective.GenerateObjective();
             GenerateBushes();
@@ -84,6 +91,22 @@ namespace Grzybobranie.General
             }
             while (isPointInCollider(location));
             return location;
+        }
+
+        private void ClearMap()
+        {
+            for(int i=0; i<treeParent.childCount; i++)
+            {
+                Destroy(treeParent.GetChild(i).gameObject);
+            }
+            for (int i = 0; i < bushParent.childCount; i++)
+            {
+                Destroy(bushParent.GetChild(i).gameObject);
+            }
+            for (int i = 0; i < mushroomParent.childCount; i++)
+            {
+                Destroy(mushroomParent.GetChild(i).gameObject);
+            }
         }
     }
 

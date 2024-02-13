@@ -9,13 +9,16 @@ namespace Grzybobranie.Player
         [SerializeField] private float moveSpeed = 5;
         private float currentMoveSpeed;
         [SerializeField] private Rigidbody2D rb;
+        [SerializeField] Transform playerTransform;
         private Vector2 movement;
         private bool isSlowed;
+        private bool canMove;
 
         private void Start()
         {
             isSlowed = false;
             currentMoveSpeed = moveSpeed;
+            canMove = true;
         }
 
         private void Update()
@@ -25,7 +28,10 @@ namespace Grzybobranie.Player
         }
         private void FixedUpdate()
         {
-            rb.MovePosition(rb.position + movement * currentMoveSpeed * Time.fixedDeltaTime);
+            if(canMove)
+            {
+                rb.MovePosition(rb.position + movement * currentMoveSpeed * Time.fixedDeltaTime);
+            }
         }
 
         public float GetCurrentMoveSpeed()
@@ -50,6 +56,21 @@ namespace Grzybobranie.Player
         public void SetIsSlowed(bool isSlowed)
         {
             this.isSlowed = isSlowed;
+        }
+
+        public void DisablePlayerMovement()
+        {
+            canMove = false;
+        }
+
+        public void EnablePlayerMovement()
+        {
+            canMove = true;
+        }
+
+        public void ResetPlayerPosition()
+        {
+            playerTransform.position = new Vector3(0, 0);
         }
     }
 

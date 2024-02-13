@@ -23,7 +23,7 @@ namespace Grzybobranie.Player
         {
             closestShroom = Physics2D.OverlapCircle(transform.position, range, layerMask);
 
-            if (closestShroom != null && (!isPreviewUp || previousShroom != closestShroom))
+            if (closestShroom != null && (!isPreviewUp || previousShroom != closestShroom) && !_objective.gamePaused)
             {
                 mushroomPreview.DeactivatePreview();
                 mushroomPreview.ActivatePreview(closestShroom.gameObject);
@@ -46,8 +46,9 @@ namespace Grzybobranie.Player
         {
             if (closestShroom != null && closestShroom.name.Contains(_objective.GetMushroomName()))
             {
+                _objective.GenerateObjective(closestShroom.name);
                 Destroy(closestShroom.gameObject);
-                _objective.GenerateObjective();
+                _objective.IncreateMushroomPicked();
             }
         }
 
