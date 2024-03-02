@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: faa6de827756529489d2de45335d2198
+guid: fd50760b921153e48b0b85f30ef80bf0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4555525171308805332
-    second: UneatableIcon_0
+      213: -8037745270302941666
+    second: EdibleSymbol_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UneatableIcon_0
+      name: EdibleSymbol_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 26
-        height: 29
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c23c9ce2ef587c0c0800000000000000
-      internalID: -4555525171308805332
+      spriteID: e1e54803341347090800000000000000
+      internalID: -8037745270302941666
       vertices: []
       indices: 
       edges: []
@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      EdibleSymbol_0: -8037745270302941666
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

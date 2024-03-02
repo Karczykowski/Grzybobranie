@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a69775b266b81f645855239387e015e3
+guid: b379d10f3188e4b4e87fe917fb64cbba
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3301876238194629004
-    second: PoisonousIcon_0
+      213: 8186000201189294169
+    second: ForkSymbol_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PoisonousIcon_0
+      name: ForkSymbol_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 33
-        height: 22
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4762b123e016d22d0800000000000000
-      internalID: -3301876238194629004
+      spriteID: 9500a2bcfc38a9170800000000000000
+      internalID: 8186000201189294169
       vertices: []
       indices: 
       edges: []
@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ForkSymbol_0: 8186000201189294169
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

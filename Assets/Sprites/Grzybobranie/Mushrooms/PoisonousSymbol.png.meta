@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7ea679122e5c5a743818f6afaf868271
+guid: 9c66e07e415553a4884a5fb6ac6a6e9d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3941829082584785946
-    second: EdibleIcon_0
+      213: 3037229629063472837
+    second: ToxicSymbol_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: EdibleIcon_0
+      name: ToxicSymbol_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 27
-        height: 28
+        width: 512
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1425c87aa034b630800000000000000
-      internalID: 3941829082584785946
+      spriteID: 5c6ae957148662a20800000000000000
+      internalID: 3037229629063472837
       vertices: []
       indices: 
       edges: []
@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ToxicSymbol_0: 3037229629063472837
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
