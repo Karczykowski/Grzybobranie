@@ -541,7 +541,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Etap sko\u0144czony!"
+  m_text: "Etap zako\u0144czony!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1557,6 +1557,7 @@ GameObject:
   - component: {fileID: 1538905734}
   - component: {fileID: 1538905736}
   - component: {fileID: 1538905737}
+  - component: {fileID: 1538905738}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -1582,7 +1583,7 @@ MonoBehaviour:
   mushrooms:
   - Borowik Szlachetny
   - Trufla Letnia
-  pointRequired: 5
+  pointRequired: 2
   playerMovement: {fileID: 639627026}
   mapGenerator: {fileID: 1538905737}
   mushroomPreview: {fileID: 1538905736}
@@ -1648,6 +1649,41 @@ MonoBehaviour:
   yBoundry: 150
   playerMovement: {fileID: 639627026}
   objective: {fileID: 1538905734}
+--- !u!114 &1538905738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538905733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e019f2784fe8ec04c8edd0fd904a980a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  masterMixer: {fileID: 24100000, guid: 94d0cefe5a79595469248f734f11f832, type: 2}
+  SFXGroup: {fileID: 1894392295406177363, guid: 94d0cefe5a79595469248f734f11f832, type: 2}
+  musicGroup: {fileID: -1415528359095257351, guid: 94d0cefe5a79595469248f734f11f832, type: 2}
+  sounds:
+  - name: Game Complete
+    clip: {fileID: 8300000, guid: a4f937400c9b1d74c8ced1250221ab49, type: 3}
+    volume: 0.026
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Mushroom Pickup
+    clip: {fileID: 8300000, guid: ac19ab66084f1db4091b2ab0cf311e2b, type: 3}
+    volume: 0.11
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  themes:
+  - name: Jazz Happy
+    clip: {fileID: 8300000, guid: 565308eb2a729cd4895e576b666e73e6, type: 3}
+    volume: 0.026
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!1 &1707781043
 GameObject:
   m_ObjectHideFlags: 0

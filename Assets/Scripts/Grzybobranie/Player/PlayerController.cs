@@ -49,6 +49,7 @@ namespace Grzybobranie.Player
                 _objective.GenerateObjective(closestShroom.name);
                 Destroy(closestShroom.gameObject);
                 _objective.IncreateMushroomPicked();
+                Audio.AudioManager.instance.PlayOnce("Mushroom Pickup");
             }
         }
 

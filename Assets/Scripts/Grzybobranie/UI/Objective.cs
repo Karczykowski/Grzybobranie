@@ -68,6 +68,7 @@ namespace Grzybobranie.UI
 
         public void FinishLevel()
         {
+            Audio.AudioManager.instance.PlayOnce("Game Complete");
             gamePaused = true;
             levelCompletePanel.SetActive(true);
             playerMovement.DisablePlayerMovement();
