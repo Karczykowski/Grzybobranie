@@ -24,6 +24,10 @@ namespace Grzybobranie.General
         [SerializeField] private Player.PlayerMovement playerMovement;
 
         [SerializeField] private UI.Objective objective;
+
+        [SerializeField] private Sprite[] treeSprites;
+        [SerializeField] private Sprite[] bushSprites;
+        [SerializeField] private Sprite[] mushroomSprites;
         void Start()
         {
             GenerateMap();
@@ -43,6 +47,7 @@ namespace Grzybobranie.General
             for(int i = 0; i < treeCount; i++)
             {
                 GameObject newTree = Instantiate(treePrefab, GenerateRandomUnoccupiedLocation(), Quaternion.identity, treeParent);
+                newTree.GetComponent<SpriteRenderer>().sprite = treeSprites[Random.Range(0,treeSprites.Length)];
                 GenerateMushrooms(newTree);
             }
         }
@@ -52,6 +57,7 @@ namespace Grzybobranie.General
             for (int i = 0; i < bushCount; i++)
             {
                 GameObject newBush = Instantiate(bushPrefab, GenerateRandomUnoccupiedLocation(), Quaternion.identity, bushParent);
+                newBush.GetComponent<SpriteRenderer>().sprite = bushSprites[Random.Range(0, bushSprites.Length)];
                 newBush.GetComponent<Objects.Bush>().SetPlayerMovement(playerMovement);
             }
         }
@@ -59,7 +65,7 @@ namespace Grzybobranie.General
         private void GenerateMushrooms(GameObject tree)
         {
             int mushroomIndex = Random.Range(0, mushrooms.Length);
-            tree.GetComponent<Objects.Plant>().GenerateMushroomsUnderTree(mushrooms[mushroomIndex], mushroomSpawnRadius, mushroomParent);
+            tree.GetComponent<Objects.Plant>().GenerateMushroomsUnderTree(mushrooms[mushroomIndex], mushroomSpawnRadius, mushroomParent, mushroomSprites[Random.Range(0, mushroomSprites.Length)]);
         }
 
         private bool isPointInCollider(Vector2 point)

@@ -6064,8 +6064,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Znajd\u017A: <Brak Grzyba>\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
+  m_sharedMaterial: {fileID: 2688865998205021192, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6089,8 +6089,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 70
+  m_fontSizeBase: 70
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8281,6 +8281,17 @@ MonoBehaviour:
   yBoundry: 150
   playerMovement: {fileID: 639627026}
   objective: {fileID: 1538905734}
+  treeSprites:
+  - {fileID: 6215267202064938543, guid: 7e1aa95302341aa418ab8e105ea7d1f0, type: 3}
+  - {fileID: 5354429476588687777, guid: c40377f711d36c64597a3e0c58a88b7b, type: 3}
+  - {fileID: 5490517706564299302, guid: 9d5bcb7bd1926c3499eb95e06cf06ad2, type: 3}
+  - {fileID: 1597045161386275989, guid: 5ac4ef2135fc99544a01aee1f989339a, type: 3}
+  - {fileID: 2933877825378991442, guid: b787f22f7d6c5754a80efd4c965f381a, type: 3}
+  bushSprites:
+  - {fileID: 21300000, guid: 4e306b367cd49cb4e942e1d8d461c973, type: 3}
+  - {fileID: 21300000, guid: 41a95a208efb6bb439e93c2768040fda, type: 3}
+  mushroomSprites:
+  - {fileID: 2586165149697466590, guid: 50adad91d7a096f45b894aaed2c5604e, type: 3}
 --- !u!114 &1538905738
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11127,8 +11138,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
+  m_sharedMaterial: {fileID: 2688865998205021192, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11152,8 +11163,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
