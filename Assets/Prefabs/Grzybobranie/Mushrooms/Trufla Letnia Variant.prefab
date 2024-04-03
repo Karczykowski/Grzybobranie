@@ -67,7 +67,7 @@ PrefabInstance:
     - target: {fileID: 3784457198456386621, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: previewSprite
       value: 
-      objectReference: {fileID: 8878398372681945198, guid: 21116bf1121a58849810782d16ef3b83, type: 3}
+      objectReference: {fileID: -990270497492591738, guid: c721e8c2728d23a49bf3a85dfff4448e, type: 3}
     - target: {fileID: 5949010414359704688, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: m_Name
       value: Trufla Letnia Variant

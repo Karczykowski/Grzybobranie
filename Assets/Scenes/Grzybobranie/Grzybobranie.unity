@@ -325,8 +325,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 207.91281, y: -40.434998}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 410, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &28247285
 MonoBehaviour:
@@ -350,7 +350,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 3037229629063472837, guid: 9c66e07e415553a4884a5fb6ac6a6e9d, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1378,7 +1378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 2592749509330440987, guid: eb627156da2a9ca468693160b009f20a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1438,7 +1438,7 @@ GameObject:
   - component: {fileID: 308281528}
   - component: {fileID: 308281531}
   - component: {fileID: 308281530}
-  - component: {fileID: 308281529}
+  - component: {fileID: 308281532}
   m_Layer: 5
   m_Name: Info Icon Panel
   m_TagString: Untagged
@@ -1465,36 +1465,10 @@ RectTransform:
   m_Father: {fileID: 292224865}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.5642927, y: 0}
-  m_AnchoredPosition: {x: 10.100006, y: 40.440002}
-  m_SizeDelta: {x: -19.059998, y: 80.869995}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 82.285}
+  m_SizeDelta: {x: 0, y: 164.57}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &308281529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308281527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Padding:
-    m_Left: 0
-    m_Right: 0
-    m_Top: 0
-    m_Bottom: 0
-  m_ChildAlignment: 3
-  m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
-  m_ChildControlHeight: 0
-  m_ChildScaleWidth: 0
-  m_ChildScaleHeight: 0
-  m_ReverseArrangement: 0
 --- !u!114 &308281530
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1533,6 +1507,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308281527}
   m_CullTransparentMesh: 1
+--- !u!114 &308281532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308281527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 100, y: 100}
+  m_Spacing: {x: 20, y: 0}
+  m_Constraint: 1
+  m_ConstraintCount: 4
 --- !u!1 &311727300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2945,8 +2943,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25, y: -40.434998}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 170, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590940452
 MonoBehaviour:
@@ -2970,7 +2968,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 8186000201189294169, guid: b379d10f3188e4b4e87fe917fb64cbba, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -3086,6 +3084,7 @@ GameObject:
   - component: {fileID: 639627026}
   - component: {fileID: 639627030}
   - component: {fileID: 639627031}
+  - component: {fileID: 639627032}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -3178,7 +3177,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 3727178614560804508, guid: fd23531bc2e74bc47ac592407a9ef56b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3200,7 +3199,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3258,6 +3257,28 @@ MonoBehaviour:
     m_Bits: 64
   _objective: {fileID: 1538905734}
   mushroomPreview: {fileID: 1538905736}
+--- !u!95 &639627032
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639627025}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2feeebdc398cd1243962d07fea8869ea, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &667362731
 GameObject:
   m_ObjectHideFlags: 0
@@ -8213,8 +8234,10 @@ MonoBehaviour:
   pointsText: {fileID: 2027550042}
   levelCompletePanel: {fileID: 747895227}
   mushrooms:
+  - "Lak\xF3wka Ametystowa"
   - Borowik Szlachetny
   - Trufla Letnia
+  - "Siedzu\u0144 Sosnowy"
   pointRequired: 5
   playerMovement: {fileID: 639627026}
   mapGenerator: {fileID: 1538905737}
@@ -8274,6 +8297,10 @@ MonoBehaviour:
   - {fileID: 6501425431244777208, guid: 7986d9a3b62786446a30747af7e2bdd5, type: 3}
   - {fileID: 2801631123687270657, guid: 234b105e062a7634ca9afab89801d127, type: 3}
   - {fileID: 3274223545661648581, guid: b73bfba2387f4314caca5cf9b58ba352, type: 3}
+  - {fileID: 8293539482421046442, guid: e2c7d8aa78741214494f8058672fc901, type: 3}
+  - {fileID: 7036634497510072312, guid: 0bea97de3028515449e27cbd01859e86, type: 3}
+  - {fileID: 1620108331643488656, guid: dbe70e195e83a684cb86ad707ac267de, type: 3}
+  - {fileID: 5353178326877793176, guid: 32f38c42c85c53c45b1bba1a6624e922, type: 3}
   mushroomSpawnRadius: 1
   mushroomParent: {fileID: 295971121}
   mushroomScale: {fileID: 2871673918638659267, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
@@ -8963,8 +8990,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 187.58916, y: -40.434998}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 290, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1707781045
 MonoBehaviour:
@@ -8988,7 +9015,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 1403435101058959226, guid: 20e89e3fd05400a4f9957713487ff00c, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -11249,8 +11276,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25, y: -40.434998}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: 50, y: -50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2127327828
 MonoBehaviour:
@@ -11274,7 +11301,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: -8037745270302941666, guid: fd50760b921153e48b0b85f30ef80bf0, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

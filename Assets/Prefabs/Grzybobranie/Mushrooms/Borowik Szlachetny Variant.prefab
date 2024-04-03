@@ -17,6 +17,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2456953990754801709, guid: 9f9e7a10df935ec49ae7bf88ef8c4a81, type: 3}
     - target: {fileID: 2871673918638659267, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871673918638659267, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2871673918638659267, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.08
       objectReference: {fileID: 0}
@@ -71,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 3784457198456386621, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: previewSprite
       value: 
-      objectReference: {fileID: -2456953990754801709, guid: 9f9e7a10df935ec49ae7bf88ef8c4a81, type: 3}
+      objectReference: {fileID: 2592749509330440987, guid: eb627156da2a9ca468693160b009f20a, type: 3}
     - target: {fileID: 5949010414359704688, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: m_Name
       value: Borowik Szlachetny Variant
