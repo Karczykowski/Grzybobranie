@@ -10,6 +10,8 @@ namespace Grzybobranie.Player
         [SerializeField] private LayerMask layerMask;
         [SerializeField] private UI.Objective _objective;
         [SerializeField] private UI.MushroomPreview mushroomPreview;
+        [SerializeField] private GameObject wrongMushroomPopup;
+        [SerializeField] private float popupDelayTime = 0f;
         private Collider2D closestShroom;
         private Collider2D previousShroom;
         private bool isPreviewUp;
@@ -51,12 +53,22 @@ namespace Grzybobranie.Player
                 _objective.IncreateMushroomPicked();
                 Audio.AudioManager.instance.Play("Mushroom Pickup");
             }
+            else if (closestShroom != null)
+            {
+                wrongMushroomPopup.SetActive(true);
+                Invoke("HideWrongMushroomPopup", popupDelayTime);
+            }
         }
 
         private void OnDrawGizmos()
         {
             Gizmos.color = Color.green;
             Gizmos.DrawWireSphere(transform.position, range);
+        }
+
+        private void HideWrongMushroomPopup()
+        {
+            wrongMushroomPopup.SetActive(false);
         }
     }
 }
