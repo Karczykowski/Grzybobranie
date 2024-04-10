@@ -3417,7 +3417,7 @@ MonoBehaviour:
     m_Bits: 64
   _objective: {fileID: 1538905734}
   mushroomPreview: {fileID: 1538905736}
-  popupDelayTime: 1
+  popupDelayTime: 1.5
   fadeoutAnimator: {fileID: 35139426}
 --- !u!95 &639627032
 Animator:
