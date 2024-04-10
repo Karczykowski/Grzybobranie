@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace Grzybobranie.Player
@@ -10,8 +11,8 @@ namespace Grzybobranie.Player
         [SerializeField] private LayerMask layerMask;
         [SerializeField] private UI.Objective _objective;
         [SerializeField] private UI.MushroomPreview mushroomPreview;
-        [SerializeField] private GameObject wrongMushroomPopup;
         [SerializeField] private float popupDelayTime = 0f;
+        [SerializeField] private Animator fadeoutAnimator;
         private Collider2D closestShroom;
         private Collider2D previousShroom;
         private bool isPreviewUp;
@@ -55,7 +56,9 @@ namespace Grzybobranie.Player
             }
             else if (closestShroom != null)
             {
-                wrongMushroomPopup.SetActive(true);
+                fadeoutAnimator.gameObject.SetActive(true);
+                fadeoutAnimator.Play("TextFadeout");
+                CancelInvoke();
                 Invoke("HideWrongMushroomPopup", popupDelayTime);
             }
         }
@@ -68,7 +71,7 @@ namespace Grzybobranie.Player
 
         private void HideWrongMushroomPopup()
         {
-            wrongMushroomPopup.SetActive(false);
+            fadeoutAnimator.gameObject.SetActive(false);
         }
     }
 }
