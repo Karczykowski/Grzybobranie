@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace Grzybobranie.UI
 {
@@ -84,6 +85,11 @@ namespace Grzybobranie.UI
             UpdatePointText();
             mapGenerator.GenerateMap();
             gamePaused = false;
+        }
+
+        public void BackToMenu()
+        {
+            SceneManager.LoadScene(0);
         }
     }
 }
