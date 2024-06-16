@@ -9,7 +9,6 @@ namespace Grzybobranie.Player
     {
         [SerializeField] private float range = 1;
         [SerializeField] private LayerMask mushroomLayerMask;
-        [SerializeField] private LayerMask questgiverLayerMask;
         [SerializeField] private UI.Objective _objective;
         [SerializeField] private UI.MushroomPreview mushroomPreview;
         [SerializeField] private float popupDelayTime = 0f;
@@ -17,12 +16,10 @@ namespace Grzybobranie.Player
         private Collider2D closestShroom;
         private Collider2D previousShroom;
         private bool isPreviewUp;
-        private bool isOnQuestgiver;
         private void Start()
         {
             isPreviewUp = false;
             previousShroom = null;
-            isOnQuestgiver = false;
         }
         
         private void Update()
@@ -45,11 +42,6 @@ namespace Grzybobranie.Player
             if (Input.GetKeyDown(KeyCode.E))
             {
                 PickUp();
-
-                if (Physics2D.OverlapCircle(transform.position, range, questgiverLayerMask) != null)
-                {
-                    isOnQuestgiver = true;
-                }
             }
         }
 

@@ -2130,7 +2130,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: New Text
+  m_text: "Znajd\u017A mi grzyba!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
   m_sharedMaterial: {fileID: 2688865998205021192, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
@@ -3587,9 +3587,6 @@ MonoBehaviour:
   mushroomLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  questgiverLayerMask:
-    serializedVersion: 2
-    m_Bits: 256
   _objective: {fileID: 1538905734}
   mushroomPreview: {fileID: 1538905736}
   popupDelayTime: 1.5
@@ -6781,7 +6778,7 @@ GameObject:
   - component: {fileID: 1122908919}
   - component: {fileID: 1122908918}
   m_Layer: 5
-  m_Name: ewr
+  m_Name: Dialog Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7214,7 +7211,7 @@ GameObject:
   - component: {fileID: 1250222066}
   - component: {fileID: 1250222068}
   m_Layer: 0
-  m_Name: QuestGiverArrow
+  m_Name: Quest Giver Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7315,6 +7312,7 @@ GameObject:
   - component: {fileID: 1251021746}
   - component: {fileID: 1251021745}
   - component: {fileID: 1251021744}
+  - component: {fileID: 1251021747}
   m_Layer: 8
   m_Name: Quest Giver
   m_TagString: Untagged
@@ -7427,6 +7425,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1251021747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251021743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cf48c1d2b7b624d90a6dd8aee92d85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 2
+  playerLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  playerMovement: {fileID: 639627026}
+  dialogBox: {fileID: 405759565}
 --- !u!1 &1265221596
 GameObject:
   m_ObjectHideFlags: 0
@@ -9741,7 +9757,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Naci\u015Bnij E aby podnie\u015B\u0107 grzyba"
+  m_text: "Naci\u015Bnij E aby dokona\u0107 interakcji"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
   m_sharedMaterial: {fileID: 2688865998205021192, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
