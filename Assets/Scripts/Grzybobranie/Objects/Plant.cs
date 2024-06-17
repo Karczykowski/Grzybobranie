@@ -8,7 +8,7 @@ namespace Grzybobranie.Objects
     {
         public void GenerateMushroomsUnderTree(GameObject mushroom, float spawnRadius, Transform mushroomParent, Sprite mushroomSprite)
         {
-            int mushroomAmount = Random.Range(0, 3);
+            int mushroomAmount = Random.Range(0, 2);
             for (int i = 0; i < mushroomAmount; i++)
             {
                 float randomAngle = Random.Range(0f, Mathf.PI * 2f);
@@ -19,6 +19,7 @@ namespace Grzybobranie.Objects
 
                 Vector3 spawnPosition = new Vector3(spawnX, spawnY, 0f);
 
+                Debug.Log("test");
                 GameObject newMushroom = Instantiate(mushroom, spawnPosition, Quaternion.identity, mushroomParent);
                 newMushroom.GetComponent<SpriteRenderer>().sprite = mushroomSprite;
             }

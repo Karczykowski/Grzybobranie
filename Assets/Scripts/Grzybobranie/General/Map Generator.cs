@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Grzybobranie.General
@@ -9,12 +11,14 @@ namespace Grzybobranie.General
         [SerializeField] private GameObject treePrefab;
         [SerializeField] private int treeCount;
         [SerializeField] private Transform treeParent;
+        private List<GameObject> generatedTrees;
 
         [SerializeField] private GameObject bushPrefab;
         [SerializeField] private int bushCount;
         [SerializeField] private Transform bushParent;
 
         [SerializeField] private GameObject[] mushrooms;
+        [SerializeField] private List<GameObject> mushroomsToGenerate;
         [SerializeField] private float mushroomSpawnRadius;
         [SerializeField] private Transform mushroomParent;
 
@@ -30,6 +34,7 @@ namespace Grzybobranie.General
         [SerializeField] private Sprite[] mushroomSprites;
         void Start()
         {
+            generatedTrees = new List<GameObject>();
             GenerateMap();
         }
 
@@ -38,6 +43,7 @@ namespace Grzybobranie.General
             ClearMap();
             playerMovement.ResetPlayerPosition();
             GenerateTrees();
+            //GenerateAllMushrooms();
             objective.GenerateObjective();
             GenerateBushes();
         }
@@ -47,8 +53,8 @@ namespace Grzybobranie.General
             for(int i = 0; i < treeCount; i++)
             {
                 GameObject newTree = Instantiate(treePrefab, GenerateRandomUnoccupiedLocation(), Quaternion.identity, treeParent);
-                newTree.GetComponent<SpriteRenderer>().sprite = treeSprites[Random.Range(0,treeSprites.Length)];
-                GenerateMushrooms(newTree);
+                generatedTrees.Add(newTree);
+                newTree.GetComponent<SpriteRenderer>().sprite = treeSprites[UnityEngine.Random.Range(0,treeSprites.Length)];
             }
         }
 
@@ -57,15 +63,27 @@ namespace Grzybobranie.General
             for (int i = 0; i < bushCount; i++)
             {
                 GameObject newBush = Instantiate(bushPrefab, GenerateRandomUnoccupiedLocation(), Quaternion.identity, bushParent);
-                newBush.GetComponent<SpriteRenderer>().sprite = bushSprites[Random.Range(0, bushSprites.Length)];
+                newBush.GetComponent<SpriteRenderer>().sprite = bushSprites[UnityEngine.Random.Range(0, bushSprites.Length)];
                 newBush.GetComponent<Objects.Bush>().SetPlayerMovement(playerMovement);
             }
         }
 
-        private void GenerateMushrooms(GameObject tree)
+        private void GenerateAllMushrooms()
         {
-            int mushroomIndex = Random.Range(0, mushrooms.Length);
-            tree.GetComponent<Objects.Plant>().GenerateMushroomsUnderTree(mushrooms[mushroomIndex], mushroomSpawnRadius, mushroomParent, mushroomSprites[Random.Range(0, mushroomSprites.Length)]);
+            for(int i = 0; i < mushrooms.Length; i++)
+            {
+                GenerateSpecificMushroom(i);
+            }
+        }
+
+        public void GenerateSpecificMushroom(int mushroomIndex)
+        {
+            
+            for(int i = 0; i < generatedTrees.Count; i++)
+            {
+                //int mushroomIndex = Random.Range(0, mushroomsToGenerate.Length);
+                generatedTrees[i].GetComponent<Objects.Plant>().GenerateMushroomsUnderTree(mushrooms[mushroomIndex], mushroomSpawnRadius, mushroomParent, mushroomSprites[UnityEngine.Random.Range(0, mushroomSprites.Length)]);
+            }
         }
 
         private bool isPointInCollider(Vector2 point)
@@ -87,7 +105,7 @@ namespace Grzybobranie.General
             Vector2 location = new Vector2();
             do
             {
-                location = new Vector2(Random.Range(-xBoundry, xBoundry), Random.Range(-yBoundry, yBoundry));
+                location = new Vector2(UnityEngine.Random.Range(-xBoundry, xBoundry), UnityEngine.Random.Range(-yBoundry, yBoundry));
                 checker++;
                 if (checker > 100)
                 {

@@ -48,7 +48,8 @@ namespace Grzybobranie.UI
                     Debug.Log("Blad znajdywania celu");
                     break;
                 }
-            } while (targetMushroom == null || previousShroom.Contains(mushroomName));
+            } while (targetMushroom == null);
+            // while (targetMushroom == null || previousShroom.Contains(mushroomName)); <- upewnienie sie, ze grzyb w objectivie jest nowy
             objectiveText.text = "ZnajdŸ: " + mushroomName;
         }
 
