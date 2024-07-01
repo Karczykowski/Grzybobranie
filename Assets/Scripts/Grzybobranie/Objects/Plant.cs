@@ -19,7 +19,7 @@ namespace Grzybobranie.Objects
 
                 Vector3 spawnPosition = new Vector3(spawnX, spawnY, 0f);
 
-                Debug.Log("test");
+                Debug.Log("Spawned Mushroom");
                 GameObject newMushroom = Instantiate(mushroom, spawnPosition, Quaternion.identity, mushroomParent);
                 newMushroom.GetComponent<SpriteRenderer>().sprite = mushroomSprite;
             }

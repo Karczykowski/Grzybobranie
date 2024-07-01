@@ -15,16 +15,28 @@ namespace Grzybobranie.General
 
         [SerializeField] GameObject dialogBox;
 
-    void Update()
+        void Update()
         {
             player = Physics2D.OverlapCircle(transform.position, range, playerLayerMask);
 
             if (player != null && Input.GetKeyDown(KeyCode.E))
             {
-                dialogBox.SetActive(!dialogBox.activeSelf);
-                playerMovement.enabled = !dialogBox.activeSelf;
+                EnableDialogBox();
             }
         }
+
+        public void EnableDialogBox()
+        {
+            dialogBox.SetActive(true);
+            playerMovement.enabled = false;
+        }
+        public void DisableDialogueBox()
+        {
+            dialogBox.SetActive(false);
+            playerMovement.enabled = true;
+        }
     }
+
+    
 }
 

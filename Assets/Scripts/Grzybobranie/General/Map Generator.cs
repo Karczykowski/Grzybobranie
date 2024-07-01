@@ -44,7 +44,6 @@ namespace Grzybobranie.General
             playerMovement.ResetPlayerPosition();
             GenerateTrees();
             //GenerateAllMushrooms();
-            objective.GenerateObjective();
             GenerateBushes();
         }
 

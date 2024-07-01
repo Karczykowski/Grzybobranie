@@ -17,7 +17,12 @@ namespace Grzybobranie.UI
         [SerializeField] Player.PlayerMovement playerMovement;
         [SerializeField] General.MapGenerator mapGenerator;
         [SerializeField] MushroomPreview mushroomPreview;
+        [SerializeField] private GameObject objectivePanel;
         public bool gamePaused;
+
+        public List<General.MushroomList> mushroomObjectives;
+        public int currentObjectiveIndex;
+        public List<string> currentMushroomsObjective;
 
         private string mushroomName;
 
@@ -25,32 +30,50 @@ namespace Grzybobranie.UI
         {
             mushroomsPicked = 0;
             gamePaused = false;
+            currentObjectiveIndex = 0;
         }
         public string GetMushroomName()
         {
             return mushroomName;
         }
 
-        public void GenerateObjective(string previousShroom = "")
+        public void ActivateNextObjective()
+        {
+            objectivePanel.SetActive(true);
+            currentMushroomsObjective = mushroomObjectives[currentObjectiveIndex].stringi;
+            GenerateObjective();
+        }
+        public void GenerateObjective()
         {
             if (mushrooms.Count == 0)
                 return;
 
             int checker = 0;
             GameObject targetMushroom;
+            if (currentMushroomsObjective.Count == 0)
+            {
+                objectiveText.text = "Wszystko znalezione!";
+                return;
+            }
+
             do
             {
-                mushroomName = mushrooms[Random.Range(0, mushrooms.Count)];
+                mushroomName = currentMushroomsObjective[Random.Range(0, currentMushroomsObjective.Count)];
                 targetMushroom = GameObject.Find(mushroomName + " Variant(Clone)");
                 checker++;
                 if (checker > 100)
                 {
-                    Debug.Log("Blad znajdywania celu");
+                    Debug.Log("Blad znajdywania celu, na mapie nie ma grzyba, który powinien byæ celem");
                     break;
                 }
             } while (targetMushroom == null);
             // while (targetMushroom == null || previousShroom.Contains(mushroomName)); <- upewnienie sie, ze grzyb w objectivie jest nowy
             objectiveText.text = "ZnajdŸ: " + mushroomName;
+        }
+
+        public void RemoveMushroomFromObjective()
+        {
+            currentMushroomsObjective.Remove(mushroomName);
         }
 
         public void IncreateMushroomPicked(int count = 1)

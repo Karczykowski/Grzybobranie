@@ -2660,7 +2660,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &377275979
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2755,7 +2755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 4}
+  m_AnchoredPosition: {x: 0, y: -0.0000071526}
   m_SizeDelta: {x: 1442.35, y: 123.25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396172648
@@ -2778,7 +2778,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Znajd\u017A mi grzyba!"
+  m_text: "Cze\u015B\u0107! Chcia\u0142bym prosi\u0107 ci\u0119 o przys\u0142ug\u0119.
+    Zbierz dla mnie 3 borowiki szlachetne..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
   m_sharedMaterial: {fileID: 2688865998205021192, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
@@ -2787,8 +2788,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4282006074
+  m_fontColor: {r: 0.2264151, g: 0.2264151, b: 0.2264151, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2811,7 +2812,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -3029,42 +3030,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &405759565
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 405759566}
-  m_Layer: 5
-  m_Name: NPCText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &405759566
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405759565}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1122908917}
-  m_Father: {fileID: 1215983357}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 4, y: 197}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &434843646
 GameObject:
   m_ObjectHideFlags: 0
@@ -8096,13 +8061,14 @@ GameObject:
   - component: {fileID: 1122908917}
   - component: {fileID: 1122908919}
   - component: {fileID: 1122908918}
+  - component: {fileID: 1122908920}
   m_Layer: 5
   m_Name: Dialog Box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1122908917
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8110,17 +8076,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122908916}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 396172647}
-  m_Father: {fileID: 405759566}
+  m_Father: {fileID: 1215983357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -1.01, y: 58.04}
+  m_AnchoredPosition: {x: 2.9899998, y: 205.03998}
   m_SizeDelta: {x: 1778.59, y: 196.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1122908918
@@ -8136,14 +8102,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.80784315}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 8538893382848708672, guid: 4a6c662595005d34c8b11b9db8a68619, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8161,6 +8127,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122908916}
   m_CullTransparentMesh: 1
+--- !u!114 &1122908920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1122908916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01512dd61ed4e9c418723d0f98307c42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 396172648}
+  lines:
+  - "Cze\u015B\u0107! Jestem krasnoludek Marian i witam w moim lesie."
+  - "Skoro tu jeste\u015B, chcia\u0142bym prosi\u0107 ci\u0119 o przys\u0142ug\u0119."
+  - "Potrzebuje 3 sztuki grzyba, a dok\u0142adniej Borowika Szlachetnego."
+  - "Kiedy ju\u017C je znajdziesz b\u0119d\u0119 tu na ciebie czeka\u0142!"
+  textSpeed: 0.05
+  talkableNPC: {fileID: 1251021747}
+  objective: {fileID: 1538905734}
 --- !u!1 &1140079953
 GameObject:
   m_ObjectHideFlags: 0
@@ -8510,7 +8497,7 @@ RectTransform:
   - {fileID: 1464329328}
   - {fileID: 292224865}
   - {fileID: 747895228}
-  - {fileID: 405759566}
+  - {fileID: 1122908917}
   - {fileID: 1933856726}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8599,13 +8586,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250222065}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.5, w: 0.8660254}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 12.49, y: 12.49, z: 12.49}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -60}
 --- !u!114 &1250222068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8762,7 +8749,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   playerMovement: {fileID: 639627026}
-  dialogBox: {fileID: 405759565}
+  dialogBox: {fileID: 1122908916}
 --- !u!1 &1265221596
 GameObject:
   m_ObjectHideFlags: 0
@@ -10185,7 +10172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 233.78003, y: 783.575}
+  m_AnchoredPosition: {x: 233.78003, y: 747}
   m_SizeDelta: {x: 1452.44, y: 121.42999}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1464329329
@@ -10700,7 +10687,18 @@ MonoBehaviour:
   playerMovement: {fileID: 639627026}
   mapGenerator: {fileID: 1538905737}
   mushroomPreview: {fileID: 1538905736}
+  objectivePanel: {fileID: 377275978}
   gamePaused: 0
+  mushroomObjectives:
+  - stringi:
+    - Borowik Szlachetny
+    - Borowik Szlachetny
+    - Borowik Szlachetny
+  - stringi:
+    - "Lak\xF3wka Ametystowa"
+    - "Siedzu\u0144 Sosnowy"
+  currentObjectiveIndex: 0
+  currentMushroomsObjective: []
 --- !u!4 &1538905735
 Transform:
   m_ObjectHideFlags: 0
