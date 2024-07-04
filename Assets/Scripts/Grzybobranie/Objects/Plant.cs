@@ -6,8 +6,9 @@ namespace Grzybobranie.Objects
 {
     public class Plant : MonoBehaviour
     {
-        public void GenerateMushroomsUnderTree(GameObject mushroom, float spawnRadius, Transform mushroomParent, Sprite mushroomSprite)
+        public GameObject GenerateMushroomsUnderTree(GameObject mushroom, float spawnRadius, Transform mushroomParent, Sprite mushroomSprite)
         {
+            GameObject newMushroom = null;
             int mushroomAmount = Random.Range(0, 2);
             for (int i = 0; i < mushroomAmount; i++)
             {
@@ -20,9 +21,11 @@ namespace Grzybobranie.Objects
                 Vector3 spawnPosition = new Vector3(spawnX, spawnY, 0f);
 
                 Debug.Log("Spawned Mushroom");
-                GameObject newMushroom = Instantiate(mushroom, spawnPosition, Quaternion.identity, mushroomParent);
+                newMushroom = Instantiate(mushroom, spawnPosition, Quaternion.identity, mushroomParent);
                 newMushroom.GetComponent<SpriteRenderer>().sprite = mushroomSprite;
+
             }
+            return newMushroom;
         }
     }
 

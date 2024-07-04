@@ -1993,7 +1993,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538905737}
         m_TargetAssemblyTypeName: Grzybobranie.General.MapGenerator, Grzybobranie
-        m_MethodName: GenerateSpecificMushroom
+        m_MethodName: EnableSpecificMushroom
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3459,7 +3459,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538905737}
         m_TargetAssemblyTypeName: Grzybobranie.General.MapGenerator, Grzybobranie
-        m_MethodName: GenerateSpecificMushroom
+        m_MethodName: EnableSpecificMushroom
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3592,7 +3592,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538905737}
         m_TargetAssemblyTypeName: Grzybobranie.General.MapGenerator, Grzybobranie
-        m_MethodName: GenerateSpecificMushroom
+        m_MethodName: EnableSpecificMushroom
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5057,7 +5057,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538905737}
         m_TargetAssemblyTypeName: Grzybobranie.General.MapGenerator, Grzybobranie
-        m_MethodName: GenerateSpecificMushroom
+        m_MethodName: EnableSpecificMushroom
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12925,7 +12925,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538905737}
         m_TargetAssemblyTypeName: Grzybobranie.General.MapGenerator, Grzybobranie
-        m_MethodName: GenerateSpecificMushroom
+        m_MethodName: EnableSpecificMushroom
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13058,7 +13058,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538905737}
         m_TargetAssemblyTypeName: Grzybobranie.General.MapGenerator, Grzybobranie
-        m_MethodName: GenerateSpecificMushroom
+        m_MethodName: EnableSpecificMushroom
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14359,7 +14359,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538905737}
         m_TargetAssemblyTypeName: Grzybobranie.General.MapGenerator, Grzybobranie
-        m_MethodName: GenerateSpecificMushroom
+        m_MethodName: EnableSpecificMushroom
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

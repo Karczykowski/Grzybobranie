@@ -16,6 +16,7 @@ namespace Grzybobranie.General
         [SerializeField] private GameObject bushPrefab;
         [SerializeField] private int bushCount;
         [SerializeField] private Transform bushParent;
+        private List<GameObject> generatedBushes;
 
         [SerializeField] private GameObject[] mushrooms;
         [SerializeField] private List<GameObject> mushroomsToGenerate;
@@ -32,9 +33,16 @@ namespace Grzybobranie.General
         [SerializeField] private Sprite[] treeSprites;
         [SerializeField] private Sprite[] bushSprites;
         [SerializeField] private Sprite[] mushroomSprites;
+
+        private Dictionary<int, List<GameObject>> spawnedMushrooms;
         void Start()
         {
             generatedTrees = new List<GameObject>();
+            spawnedMushrooms = new Dictionary<int, List<GameObject>>();
+            for (int i = 0; i <= mushrooms.Length; i++)
+            {
+                spawnedMushrooms[i] = new List<GameObject>();
+            }
             GenerateMap();
         }
 
@@ -43,7 +51,7 @@ namespace Grzybobranie.General
             ClearMap();
             playerMovement.ResetPlayerPosition();
             GenerateTrees();
-            //GenerateAllMushrooms();
+            GenerateAllMushrooms();
             GenerateBushes();
         }
 
@@ -64,6 +72,7 @@ namespace Grzybobranie.General
                 GameObject newBush = Instantiate(bushPrefab, GenerateRandomUnoccupiedLocation(), Quaternion.identity, bushParent);
                 newBush.GetComponent<SpriteRenderer>().sprite = bushSprites[UnityEngine.Random.Range(0, bushSprites.Length)];
                 newBush.GetComponent<Objects.Bush>().SetPlayerMovement(playerMovement);
+                generatedBushes.Add(newBush);
             }
         }
 
@@ -81,7 +90,20 @@ namespace Grzybobranie.General
             for(int i = 0; i < generatedTrees.Count; i++)
             {
                 //int mushroomIndex = Random.Range(0, mushroomsToGenerate.Length);
-                generatedTrees[i].GetComponent<Objects.Plant>().GenerateMushroomsUnderTree(mushrooms[mushroomIndex], mushroomSpawnRadius, mushroomParent, mushroomSprites[UnityEngine.Random.Range(0, mushroomSprites.Length)]);
+                GameObject newMushroom = generatedTrees[i].GetComponent<Objects.Plant>().GenerateMushroomsUnderTree(mushrooms[mushroomIndex], mushroomSpawnRadius, mushroomParent, mushroomSprites[UnityEngine.Random.Range(0, mushroomSprites.Length)]);
+                if(newMushroom != null)
+                {
+                    spawnedMushrooms[mushroomIndex].Add(newMushroom);
+                    newMushroom.SetActive(false);
+                }
+            }
+        }
+
+        public void EnableSpecificMushroom(int mushroomIndex)
+        {
+            foreach(GameObject mushroom in spawnedMushrooms[mushroomIndex])
+            {
+                mushroom.SetActive(true);
             }
         }
 
@@ -120,15 +142,24 @@ namespace Grzybobranie.General
         {
             for(int i=0; i<treeParent.childCount; i++)
             {
-                Destroy(treeParent.GetChild(i).gameObject);
+                foreach(GameObject tree in generatedTrees)
+                {
+                    Destroy(tree);
+                }
             }
             for (int i = 0; i < bushParent.childCount; i++)
             {
-                Destroy(bushParent.GetChild(i).gameObject);
+                foreach(GameObject bush in generatedBushes)
+                {
+                    Destroy(bush);
+                }
             }
-            for (int i = 0; i < mushroomParent.childCount; i++)
+            for (int i = 0; i < spawnedMushrooms.Count; i++)
             {
-                Destroy(mushroomParent.GetChild(i).gameObject);
+                foreach(GameObject mushroom in spawnedMushrooms[i])
+                {
+                    Destroy(mushroom);
+                }
             }
         }
     }
