@@ -15,12 +15,11 @@ namespace Grzybobranie.UI
 
         [SerializeField] General.TalkableNPC talkableNPC;
         [SerializeField] UI.Objective objective;
-        void Start()
+
+        private void Start()
         {
-            textComponent.text = string.Empty;
-            StartDialogue();
+            index = 0;
         }
-            
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -37,8 +36,15 @@ namespace Grzybobranie.UI
             }
         }
 
-        void StartDialogue()
+        public void StartDialogue()
         {
+            textComponent.text = string.Empty;
+            StartCoroutine(TypeLine());
+        }
+
+        public void StartDialogueAnew()
+        {
+            textComponent.text = string.Empty;
             index = 0;
             StartCoroutine(TypeLine());
         }
@@ -66,6 +72,11 @@ namespace Grzybobranie.UI
                 objective.ActivateNextObjective();
             }
         }
+
+        public void ResetDialogue()
+        {
+            index = 0;
+        }    
     }
 }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Grzybobranie.UI;
 using UnityEngine;
 
 namespace Grzybobranie.General
@@ -14,6 +15,14 @@ namespace Grzybobranie.General
         [SerializeField] Player.PlayerMovement playerMovement;
 
         [SerializeField] GameObject dialogBox;
+        [SerializeField] Dialogue dialogue;
+
+        private bool isDialogueUp;
+
+        private void Start()
+        {
+            isDialogueUp = false;
+        }
 
         void Update()
         {
@@ -21,7 +30,14 @@ namespace Grzybobranie.General
 
             if (player != null && Input.GetKeyDown(KeyCode.E))
             {
-                EnableDialogBox();
+                if(!isDialogueUp)
+                {
+                    EnableDialogBox();
+                }
+                else
+                {
+
+                }
             }
         }
 
@@ -29,11 +45,14 @@ namespace Grzybobranie.General
         {
             dialogBox.SetActive(true);
             playerMovement.enabled = false;
+            dialogue.StartDialogue();
+            isDialogueUp = true;
         }
         public void DisableDialogueBox()
         {
             dialogBox.SetActive(false);
             playerMovement.enabled = true;
+            isDialogueUp = false;
         }
     }
 

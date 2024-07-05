@@ -37,18 +37,19 @@ namespace Grzybobranie.General
         private Dictionary<int, List<GameObject>> spawnedMushrooms;
         void Start()
         {
-            generatedTrees = new List<GameObject>();
-            spawnedMushrooms = new Dictionary<int, List<GameObject>>();
-            for (int i = 0; i <= mushrooms.Length; i++)
-            {
-                spawnedMushrooms[i] = new List<GameObject>();
-            }
             GenerateMap();
         }
 
         public void GenerateMap()
         {
             ClearMap();
+            generatedTrees = new List<GameObject>();
+            generatedBushes = new List<GameObject>();
+            spawnedMushrooms = new Dictionary<int, List<GameObject>>();
+            for (int i = 0; i <= mushrooms.Length; i++)
+            {
+                spawnedMushrooms[i] = new List<GameObject>();
+            }
             playerMovement.ResetPlayerPosition();
             GenerateTrees();
             GenerateAllMushrooms();
@@ -103,7 +104,10 @@ namespace Grzybobranie.General
         {
             foreach(GameObject mushroom in spawnedMushrooms[mushroomIndex])
             {
-                mushroom.SetActive(true);
+                if(mushroom != null)
+                {
+                    mushroom.SetActive(true);
+                }
             }
         }
 
@@ -140,25 +144,38 @@ namespace Grzybobranie.General
 
         private void ClearMap()
         {
-            for(int i=0; i<treeParent.childCount; i++)
+            if(generatedTrees != null)
             {
-                foreach(GameObject tree in generatedTrees)
+                for (int i = 0; i < generatedTrees.Count; i++)
                 {
-                    Destroy(tree);
+                    foreach (GameObject tree in generatedTrees)
+                    {
+                        Destroy(tree);
+                    }
                 }
             }
-            for (int i = 0; i < bushParent.childCount; i++)
+            if(generatedBushes != null)
             {
-                foreach(GameObject bush in generatedBushes)
+                for (int i = 0; i < generatedBushes.Count; i++)
                 {
-                    Destroy(bush);
+                    foreach (GameObject bush in generatedBushes)
+                    {
+                        Destroy(bush);
+                    }
                 }
             }
-            for (int i = 0; i < spawnedMushrooms.Count; i++)
+            
+            if(spawnedMushrooms != null)
             {
-                foreach(GameObject mushroom in spawnedMushrooms[i])
+                for (int i = 0; i < spawnedMushrooms.Count; i++)
                 {
-                    Destroy(mushroom);
+                    foreach (GameObject mushroom in spawnedMushrooms[i])
+                    {
+                        if (mushroom != null)
+                        {
+                            Destroy(mushroom.gameObject);
+                        }
+                    }
                 }
             }
         }

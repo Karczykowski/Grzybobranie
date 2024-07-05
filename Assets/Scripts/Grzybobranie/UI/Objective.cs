@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 namespace Grzybobranie.UI
 {
@@ -23,6 +24,8 @@ namespace Grzybobranie.UI
         public List<General.MushroomList> mushroomObjectives;
         public int currentObjectiveIndex;
         public List<string> currentMushroomsObjective;
+        [SerializeField] Dialogue dialogue;
+        public bool isObjectiveUp;
 
         private string mushroomName;
 
@@ -31,17 +34,35 @@ namespace Grzybobranie.UI
             mushroomsPicked = 0;
             gamePaused = false;
             currentObjectiveIndex = 0;
+            isObjectiveUp = false;
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                FinishLevel();
+            }
         }
         public string GetMushroomName()
         {
             return mushroomName;
         }
 
+        public void SetMushroomName(string _mushroomName)
+        {
+            mushroomName = _mushroomName;
+        }
+
         public void ActivateNextObjective()
         {
-            objectivePanel.SetActive(true);
-            currentMushroomsObjective = mushroomObjectives[currentObjectiveIndex].stringi;
-            GenerateObjective();
+            if(!isObjectiveUp)
+            {
+                isObjectiveUp = true;
+                objectivePanel.SetActive(true);
+                currentMushroomsObjective = mushroomObjectives[currentObjectiveIndex].stringi.ToList();
+                GenerateObjective();
+            }
         }
         public void GenerateObjective()
         {
@@ -53,6 +74,7 @@ namespace Grzybobranie.UI
             if (currentMushroomsObjective.Count == 0)
             {
                 objectiveText.text = "Wszystko znalezione!";
+                mushroomName = null;
                 return;
             }
 
@@ -109,11 +131,19 @@ namespace Grzybobranie.UI
             UpdatePointText();
             mapGenerator.GenerateMap();
             gamePaused = false;
+            ResetAllObjectives();
         }
 
         public void BackToMenu()
         {
             SceneManager.LoadScene(0);
+        }
+
+        public void ResetAllObjectives()
+        {
+            currentMushroomsObjective = null;
+            mushroomName = null;
+            dialogue.ResetDialogue();
         }
     }
 }

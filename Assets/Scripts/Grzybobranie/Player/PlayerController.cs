@@ -47,21 +47,29 @@ namespace Grzybobranie.Player
 
         void PickUp()
         {
-            if (closestShroom != null && closestShroom.name.Contains(_objective.GetMushroomName()))
+            if(_objective.GetMushroomName() != null)
             {
-                _objective.RemoveMushroomFromObjective();
-                _objective.GenerateObjective();
-                Destroy(closestShroom.gameObject);
-                _objective.IncreateMushroomPicked();
-                Audio.AudioManager.instance.Play("Mushroom Pickup");
+                if (closestShroom != null && closestShroom.name.Contains(_objective.GetMushroomName()))
+                {
+                    _objective.RemoveMushroomFromObjective();
+                    _objective.GenerateObjective();
+                    Destroy(closestShroom.gameObject);
+                    _objective.IncreateMushroomPicked();
+                    Audio.AudioManager.instance.Play("Mushroom Pickup");
+                }
+                else if (closestShroom != null)
+                {
+                    fadeoutAnimator.gameObject.SetActive(true);
+                    fadeoutAnimator.Play("TextFadeout");
+                    CancelInvoke();
+                    Invoke("HideWrongMushroomPopup", popupDelayTime);
+                }
             }
-            else if (closestShroom != null)
+            else
             {
-                fadeoutAnimator.gameObject.SetActive(true);
-                fadeoutAnimator.Play("TextFadeout");
-                CancelInvoke();
-                Invoke("HideWrongMushroomPopup", popupDelayTime);
-            }
+                return;
+            }    
+            
         }
 
         private void OnDrawGizmos()
