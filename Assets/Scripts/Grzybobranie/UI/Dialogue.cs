@@ -2,36 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 namespace Grzybobranie.UI
 {
     public class Dialogue : MonoBehaviour
     {
         public TextMeshProUGUI textComponent;
-        public string[] lines;
+        public List<General.MushroomList> lines;
         public float textSpeed;
-
-        private int index;
+        public int currentQuestIndex;
+        private int currentLineIndex;
 
         [SerializeField] General.TalkableNPC talkableNPC;
         [SerializeField] UI.Objective objective;
 
         private void Start()
         {
-            index = 0;
+            currentLineIndex = 0;
+            currentQuestIndex = 0;
         }
         void Update()
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (textComponent.text == lines[index])
+                if (textComponent.text == lines[currentQuestIndex].stringi[currentLineIndex])
                 {
                     NextLine();
                 }
                 else
                 {
                     StopAllCoroutines();
-                    textComponent.text = lines[index]; 
+                    textComponent.text = lines[currentQuestIndex].stringi[currentLineIndex]; 
                 }
             }
         }
@@ -45,13 +47,13 @@ namespace Grzybobranie.UI
         public void StartDialogueAnew()
         {
             textComponent.text = string.Empty;
-            index = 0;
+            currentLineIndex = 0;
             StartCoroutine(TypeLine());
         }
 
         IEnumerator TypeLine()
         {
-            foreach (char c in lines[index].ToCharArray())
+            foreach (char c in lines[currentQuestIndex].stringi[currentLineIndex].ToCharArray())
             {
                 textComponent.text += c;
                 yield return new WaitForSeconds(textSpeed);
@@ -60,22 +62,22 @@ namespace Grzybobranie.UI
 
         void NextLine()
         {
-            if(index < lines.Length - 1)
+            if(currentLineIndex < lines[currentQuestIndex].stringi.Count - 1)
             {
-                index++;
+                currentLineIndex++;
                 textComponent.text = string.Empty;
                 StartCoroutine(TypeLine());
             }
             else
             {
                 talkableNPC.DisableDialogueBox();
-                objective.ActivateNextObjective();
+                objective.ActivateObjective();
             }
         }
 
         public void ResetDialogue()
         {
-            index = 0;
+            currentLineIndex = 0;
         }    
     }
 }

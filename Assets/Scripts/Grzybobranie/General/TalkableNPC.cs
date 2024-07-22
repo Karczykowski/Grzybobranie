@@ -16,6 +16,7 @@ namespace Grzybobranie.General
 
         [SerializeField] GameObject dialogBox;
         [SerializeField] Dialogue dialogue;
+        [SerializeField] Objective objective;
 
         private bool isDialogueUp;
 
@@ -32,6 +33,11 @@ namespace Grzybobranie.General
             {
                 if(!isDialogueUp)
                 {
+                    if(objective.isObjectiveComplete)
+                    {
+                        objective.ActivateNextObjective();
+                    }
+
                     EnableDialogBox();
                 }
                 else

@@ -26,6 +26,7 @@ namespace Grzybobranie.UI
         public List<string> currentMushroomsObjective;
         [SerializeField] Dialogue dialogue;
         public bool isObjectiveUp;
+        public bool isObjectiveComplete;
 
         private string mushroomName;
 
@@ -35,6 +36,7 @@ namespace Grzybobranie.UI
             gamePaused = false;
             currentObjectiveIndex = 0;
             isObjectiveUp = false;
+            isObjectiveComplete = false;
         }
 
         private void Update()
@@ -54,7 +56,7 @@ namespace Grzybobranie.UI
             mushroomName = _mushroomName;
         }
 
-        public void ActivateNextObjective()
+        public void ActivateObjective()
         {
             if(!isObjectiveUp)
             {
@@ -62,6 +64,21 @@ namespace Grzybobranie.UI
                 objectivePanel.SetActive(true);
                 currentMushroomsObjective = mushroomObjectives[currentObjectiveIndex].stringi.ToList();
                 GenerateObjective();
+            }
+        }
+
+        public void ActivateNextObjective()
+        {
+            if(currentMushroomsObjective.Count == 0 && currentObjectiveIndex < mushroomObjectives.Count - 1)
+            {
+                currentObjectiveIndex++;
+                dialogue.currentQuestIndex++;
+                dialogue.ResetDialogue();
+                isObjectiveUp = false;
+            }
+            else
+            {
+                return;
             }
         }
         public void GenerateObjective()
@@ -75,7 +92,12 @@ namespace Grzybobranie.UI
             {
                 objectiveText.text = "Wszystko znalezione!";
                 mushroomName = null;
+                isObjectiveComplete = true;
                 return;
+            }
+            else
+            {
+                isObjectiveComplete = false;
             }
 
             do

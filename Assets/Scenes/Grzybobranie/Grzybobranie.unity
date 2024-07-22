@@ -8141,11 +8141,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textComponent: {fileID: 396172648}
   lines:
-  - "Cze\u015B\u0107! Jestem krasnoludek Marian i witam w moim lesie."
-  - "Skoro tu jeste\u015B, chcia\u0142bym prosi\u0107 ci\u0119 o przys\u0142ug\u0119."
-  - "Potrzebuje 3 sztuki grzyba, a dok\u0142adniej Borowika Szlachetnego."
-  - "Kiedy ju\u017C je znajdziesz b\u0119d\u0119 tu na ciebie czeka\u0142!"
+  - stringi:
+    - "Cze\u015B\u0107! Jestem krasnoludek Marian i witam w moim lesie."
+    - "Skoro tu jeste\u015B, chcia\u0142bym prosi\u0107 ci\u0119 o przys\u0142ug\u0119."
+    - "Potrzebuje 3 sztuki grzyba, a dok\u0142adniej Borowika Szlachetnego."
+    - "Kiedy ju\u017C je znajdziesz b\u0119d\u0119 tu na ciebie czeka\u0142!"
+  - stringi:
+    - "To ju\u017C wszystkie grzyby. \u015Awietnie si\u0119 spisa\u0142e\u015B/a\u015B!"
+    - To jednak nie wszystkie.
+    - "Potrzebuje o wiele wi\u0119cej grzyb\xF3w!"
+    - "Przynie\u015B mi prosz\u0119 5 Smardzy Jadalnych"
+  - stringi:
+    - "Ale si\u0119 ciesz\u0119!"
+    - Teraz 6 Trufli Letnich!
   textSpeed: 0.05
+  currentQuestIndex: 0
   talkableNPC: {fileID: 1251021747}
   objective: {fileID: 1538905734}
 --- !u!1 &1140079953
@@ -8751,6 +8761,7 @@ MonoBehaviour:
   playerMovement: {fileID: 639627026}
   dialogBox: {fileID: 1122908916}
   dialogue: {fileID: 1122908920}
+  objective: {fileID: 1538905734}
 --- !u!1 &1265221596
 GameObject:
   m_ObjectHideFlags: 0
@@ -10684,7 +10695,7 @@ MonoBehaviour:
   - Borowik Szlachetny
   - Trufla Letnia
   - "Siedzu\u0144 Sosnowy"
-  pointRequired: 5
+  pointRequired: 20
   playerMovement: {fileID: 639627026}
   mapGenerator: {fileID: 1538905737}
   mushroomPreview: {fileID: 1538905736}
@@ -10696,11 +10707,23 @@ MonoBehaviour:
     - Borowik Szlachetny
     - Borowik Szlachetny
   - stringi:
-    - "Lak\xF3wka Ametystowa"
-    - "Siedzu\u0144 Sosnowy"
+    - Smardz Jadalny
+    - Smardz Jadalny
+    - Smardz Jadalny
+    - Smardz Jadalny
+    - Smardz Jadalny
+  - stringi:
+    - Trufla Letnia
+    - Trufla Letnia
+    - Trufla Letnia
+    - Trufla Letnia
+    - Trufla Letnia
+    - Trufla Letnia
   currentObjectiveIndex: 0
   currentMushroomsObjective: []
   dialogue: {fileID: 1122908920}
+  isObjectiveUp: 0
+  isObjectiveComplete: 0
 --- !u!4 &1538905735
 Transform:
   m_ObjectHideFlags: 0
