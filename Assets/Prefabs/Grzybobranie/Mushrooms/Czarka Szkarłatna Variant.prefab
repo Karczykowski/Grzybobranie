@@ -55,7 +55,7 @@ PrefabInstance:
     - target: {fileID: 3784457198456386621, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: previewSprite
       value: 
-      objectReference: {fileID: 9171606562585882486, guid: c2c80330eddb3834ab11c59a0e82aae6, type: 3}
+      objectReference: {fileID: -8218434018146032142, guid: 5f6aeee3c14013a4aab25434767547ec, type: 3}
     - target: {fileID: 5949010414359704688, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: m_Name
       value: "Czarka Szkar\u0142atna Variant"

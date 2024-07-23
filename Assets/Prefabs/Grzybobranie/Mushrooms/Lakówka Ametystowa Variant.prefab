@@ -55,10 +55,10 @@ PrefabInstance:
     - target: {fileID: 3784457198456386621, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: previewSprite
       value: 
-      objectReference: {fileID: 5548977967012876539, guid: 28f3f9b82e3e85f4485bdba8ec3d8a0f, type: 3}
+      objectReference: {fileID: -3347141774520829199, guid: 68f9cc106cd69b14fb12cf7f446facda, type: 3}
     - target: {fileID: 5949010414359704688, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: m_Name
-      value: "Lak\xF3wka Ametystowa"
+      value: "Lak\xF3wka Ametystowa Variant"
       objectReference: {fileID: 0}
     - target: {fileID: 8978262234954890232, guid: 4751708aa4c7f164b918361a184cf24b, type: 3}
       propertyPath: m_Color.b
