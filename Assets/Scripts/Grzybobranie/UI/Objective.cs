@@ -64,6 +64,10 @@ namespace Grzybobranie.UI
                 objectivePanel.SetActive(true);
                 currentMushroomsObjective = mushroomObjectives[currentObjectiveIndex].stringi.ToList();
                 GenerateObjective();
+                if(dialogue.currentQuestIndex < mapGenerator.GetMushroomsCount())
+                {
+                    mapGenerator.EnableSpecificMushroom(dialogue.currentQuestIndex);
+                }
             }
         }
 
@@ -166,6 +170,11 @@ namespace Grzybobranie.UI
             currentMushroomsObjective = null;
             mushroomName = null;
             dialogue.ResetDialogue();
+
+            currentObjectiveIndex = 0;
+            dialogue.currentQuestIndex = 0;
+            isObjectiveUp = false;
+            isObjectiveComplete = false;
         }
     }
 }

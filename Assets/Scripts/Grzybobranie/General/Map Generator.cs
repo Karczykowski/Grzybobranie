@@ -179,6 +179,11 @@ namespace Grzybobranie.General
                 }
             }
         }
+
+        public int GetMushroomsCount()
+        {
+            return mushrooms.Length;
+        }
     }
 
 }
