@@ -12,6 +12,7 @@ namespace Grzybobranie.UI
         [SerializeField] private TextMeshProUGUI objectiveText;
         [SerializeField] private TextMeshProUGUI pointsText;
         [SerializeField] private GameObject levelCompletePanel;
+        [SerializeField] private GameObject levelPausePanel;
         [SerializeField] private List<string> mushrooms;
         private int mushroomsPicked;
         [SerializeField] private int pointRequired;
@@ -30,6 +31,13 @@ namespace Grzybobranie.UI
 
         private string mushroomName;
 
+        private float gameTime;
+
+        [SerializeField] TextMeshProUGUI timeElapsedText;
+        [SerializeField] TextMeshProUGUI timeElapsedTextPause;
+
+        [SerializeField] General.TalkableNPC talkableNPC;
+
         private void Start()
         {
             mushroomsPicked = 0;
@@ -37,13 +45,19 @@ namespace Grzybobranie.UI
             currentObjectiveIndex = 0;
             isObjectiveUp = false;
             isObjectiveComplete = false;
+            gameTime = 0f;
         }
 
         private void Update()
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                FinishLevel();
+                PauseLevel();
+            }
+
+            if(!gamePaused)
+            {
+                gameTime += Time.deltaTime;
             }
         }
         public string GetMushroomName()
@@ -94,7 +108,7 @@ namespace Grzybobranie.UI
             GameObject targetMushroom;
             if (currentMushroomsObjective.Count == 0)
             {
-                objectiveText.text = "Wszystko znalezione!";
+                objectiveText.text = "Wszystko znalezione! Mogê wracaæ do krasnoludka";
                 mushroomName = null;
                 isObjectiveComplete = true;
                 return;
@@ -144,9 +158,30 @@ namespace Grzybobranie.UI
             Audio.AudioManager.instance.PlayOnce("Game Complete");
             gamePaused = true;
             levelCompletePanel.SetActive(true);
+            timeElapsedText.SetText("Czas: " + Mathf.Floor(gameTime).ToString() + "s");
             playerMovement.DisablePlayerMovement();
             objectiveText.text = "";
             mushroomPreview.DeactivatePreview();
+        }
+
+        public void PauseLevel()
+        {
+            if(talkableNPC.GetIsDialogueUp())
+            {
+                return;
+            }
+            
+            gamePaused = true;
+            levelPausePanel.SetActive(true);
+            timeElapsedTextPause.SetText("Czas: " + Mathf.Floor(gameTime).ToString() + "s");
+            playerMovement.DisablePlayerMovement();
+        }
+
+        public void ResumeGame()
+        {
+            gamePaused = false;
+            levelPausePanel.SetActive(false);
+            playerMovement.EnablePlayerMovement();
         }
 
         public void RestartGame()
@@ -158,6 +193,7 @@ namespace Grzybobranie.UI
             mapGenerator.GenerateMap();
             gamePaused = false;
             ResetAllObjectives();
+            gameTime = 0f;
         }
 
         public void BackToMenu()

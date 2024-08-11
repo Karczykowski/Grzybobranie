@@ -60,6 +60,11 @@ namespace Grzybobranie.General
             playerMovement.enabled = true;
             isDialogueUp = false;
         }
+
+        public bool GetIsDialogueUp()
+        {
+            return isDialogueUp;
+        }
     }
 
     
