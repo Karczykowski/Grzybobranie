@@ -30,7 +30,7 @@ namespace Grzybobranie.Player
         {
             if(canMove)
             {
-                rb.MovePosition(rb.position + movement * currentMoveSpeed * Time.fixedDeltaTime);
+                rb.MovePosition(rb.position + movement.normalized * currentMoveSpeed * Time.fixedDeltaTime);
             }
         }
 
