@@ -20,6 +20,7 @@ namespace Grzybobranie.UI
         [SerializeField] General.MapGenerator mapGenerator;
         [SerializeField] MushroomPreview mushroomPreview;
         [SerializeField] private GameObject objectivePanel;
+        [SerializeField] TextMeshProUGUI timeText;
         public bool gamePaused;
 
         public List<General.MushroomList> mushroomObjectives;
@@ -58,6 +59,7 @@ namespace Grzybobranie.UI
             if(!gamePaused)
             {
                 gameTime += Time.deltaTime;
+                timeText.SetText("Czas: " + Mathf.Floor(gameTime).ToString() + "s");
             }
         }
         public string GetMushroomName()
