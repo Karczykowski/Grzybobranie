@@ -1361,7 +1361,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &214099869
@@ -1909,7 +1909,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &265619959
@@ -2644,7 +2644,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &313281719
@@ -8771,37 +8771,37 @@ MonoBehaviour:
   - stringi:
     - "Cze\u015B\u0107! Jestem krasnoludek Marian i witam w moim lesie."
     - "Skoro tu jeste\u015B, chcia\u0142bym prosi\u0107 ci\u0119 o przys\u0142ug\u0119."
-    - "Potrzebuje 3 sztuki grzyba, a dok\u0142adniej Borowika Szlachetnego."
-    - "Kiedy ju\u017C je znajdziesz b\u0119d\u0119 tu na ciebie czeka\u0142!"
+    - "Potrzebuje 3 sztuki borowik\xF3w szlachetnych"
+    - "Kiedy ju\u017C je znajdziesz, b\u0119d\u0119 tu na ciebie czeka\u0142!"
   - stringi:
-    - "To ju\u017C wszystkie grzyby. \u015Awietnie si\u0119 spisa\u0142e\u015B/a\u015B!"
+    - "To ju\u017C wszystkie grzyby. Dobra robota - brawo!"
     - "Jednak jestem jeszcze bardzo g\u0142odny :("
-    - "Potrzebuje o wiele wi\u0119cej grzyb\xF3w!"
-    - "Przynie\u015B mi prosz\u0119 5 Smardzy Jadalnych"
+    - "Potrzebuj\u0119 o wiele wi\u0119cej grzyb\xF3w!"
+    - "Przynie\u015B mi, prosz\u0119, 5 smardz\xF3w jadalnych."
   - stringi:
     - "Ale si\u0119 ciesz\u0119!"
-    - Teraz 6 Trufli Letnich!
+    - Teraz 6 trufli letnich!
   - stringi:
     - Super!
-    - "Teraz ma\u0142a mieszanka"
+    - "Teraz ma\u0142a mieszanka."
   - stringi:
     - To jest dopiero pychotka!
-    - "Tym razem chce prosi\u0107 si\u0119 o co\u015B specjlanego"
-    - "Bu\u0142awka Pa\u0142eczkowata jest nie tylko niejadalna"
+    - "Tym razem chc\u0119 ci\u0119 prosi\u0107 o co\u015B specjalnego."
+    - "Bu\u0142awka pa\u0142eczkowata jest nie tylko niejadalna..."
     - "Jest ona r\xF3wnie\u017C pod ochron\u0105!!!"
   - stringi:
-    - "Jestem twoim prawdziwym d\u0142u\u017Cnikiem"
-    - "Mimo to, jest jeszcze wiele grzyb\xF3w do zebrania"
-    - "Przygotuj teraz ma\u0142\u0105 mieszanin\u0119"
+    - "Jestem twoim prawdziwym d\u0142u\u017Cnikiem."
+    - "Mimo to jest jeszcze wiele grzyb\xF3w do zebrania."
+    - "Przygotuj teraz ma\u0142\u0105 mieszanin\u0119."
   - stringi:
     - A teraz uwaga!
-    - "Czarka szkar\u0142atna to czerwony grzyb"
-    - "Poza tym ma on charakterystyczny kszta\u0142t"
+    - "Czarka szkar\u0142atna to czerwony grzyb."
+    - "Poza tym ma on charakterystyczny kszta\u0142t."
     - Jest niejadalny!
-    - "Przynie\u015B mi jego 1 sztuk\u0119"
+    - "Przynie\u015B mi jedn\u0105 czark\u0119 szkar\u0142atn\u0105."
   - stringi:
-    - "Dzi\u0119kuje"
-    - Czas na twoje ostatnie zadanie
+    - "Dzi\u0119kuje!"
+    - Czas na twoje ostatnie zadanie.
   textSpeed: 0.05
   currentQuestIndex: 0
   talkableNPC: {fileID: 1251021747}
@@ -10058,7 +10058,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &1314965210
@@ -11702,66 +11702,66 @@ MonoBehaviour:
   gamePaused: 0
   mushroomObjectives:
   - stringi:
-    - Borowik Szlachetny
-    - Borowik Szlachetny
-    - Borowik Szlachetny
+    - borowik szlachetny
+    - borowik szlachetny
+    - borowik szlachetny
   - stringi:
-    - Smardz Jadalny
-    - Smardz Jadalny
-    - Smardz Jadalny
-    - Smardz Jadalny
-    - Smardz Jadalny
+    - smardz jadalny
+    - smardz jadalny
+    - smardz jadalny
+    - smardz jadalny
+    - smardz jadalny
   - stringi:
-    - Trufla Letnia
-    - Trufla Letnia
-    - Trufla Letnia
-    - Trufla Letnia
-    - Trufla Letnia
-    - Trufla Letnia
+    - trufla letnia
+    - trufla letnia
+    - trufla letnia
+    - trufla letnia
+    - trufla letnia
+    - trufla letnia
   - stringi:
-    - "Lak\xF3wka Ametystowa"
-    - Borowik Szlachetny
-    - Smardz Jadalny
-    - Borowik Szlachetny
-    - "Lak\xF3wka Ametystowa"
-    - "Lak\xF3wka Ametystowa"
+    - "lak\xF3wka ametystowa"
+    - borowik szlachetny
+    - smardz jadalny
+    - borowik szlachetny
+    - "lak\xF3wka ametystowa"
+    - "lak\xF3wka ametystowa"
   - stringi:
-    - "Bu\u0142awka Pa\u0142eczkowata"
-    - "Bu\u0142awka Pa\u0142eczkowata"
-    - "Bu\u0142awka Pa\u0142eczkowata"
-    - "Bu\u0142awka Pa\u0142eczkowata"
+    - "bu\u0142awka pa\u0142eczkowata"
+    - "bu\u0142awka pa\u0142eczkowata"
+    - "bu\u0142awka pa\u0142eczkowata"
+    - "bu\u0142awka pa\u0142eczkowata"
   - stringi:
-    - "Lak\xF3wka Ametystowa"
-    - "Lak\xF3wka Ametystowa"
-    - Smardz Jadalny
-    - Smardz Jadalny
-    - Smardz Jadalny
-    - Borowik Szlachetny
-    - Trufla Letnia
-    - Trufla Letnia
-    - Trufla Letnia
-    - "Siedzu\u0144 Sosnowy"
-    - "Siedzu\u0144 Sosnowy"
-    - "Siedzu\u0144 Sosnowy"
-    - "Siedzu\u0144 Sosnowy"
-    - "Bu\u0142awka Pa\u0142eczkowata"
+    - "lak\xF3wka ametystowa"
+    - "lak\xF3wka ametystowa"
+    - smardz jadalny
+    - smardz jadalny
+    - smardz jadalny
+    - borowik szlachetny
+    - trufla letnia
+    - trufla letnia
+    - trufla letnia
+    - "siedzu\u0144 sosnowy"
+    - "siedzu\u0144 sosnowy"
+    - "siedzu\u0144 sosnowy"
+    - "siedzu\u0144 sosnowy"
+    - "bu\u0142awka pa\u0142eczkowata"
   - stringi:
-    - "Czarka Szkar\u0142atna"
+    - "czarka szkar\u0142atna"
   - stringi:
-    - "Lak\xF3wka Ametystowa"
-    - "Lak\xF3wka Ametystowa"
-    - Smardz Jadalny
-    - Smardz Jadalny
-    - Smardz Jadalny
-    - Borowik Szlachetny
-    - Trufla Letnia
-    - Trufla Letnia
-    - Trufla Letnia
-    - "Siedzu\u0144 Sosnowy"
-    - "Siedzu\u0144 Sosnowy"
-    - "Siedzu\u0144 Sosnowy"
-    - "Siedzu\u0144 Sosnowy"
-    - "Bu\u0142awka Pa\u0142eczkowata"
+    - "lak\xF3wka ametystowa"
+    - "lak\xF3wka ametystowa"
+    - smardz jadalny
+    - smardz jadalny
+    - smardz jadalny
+    - borowik szlachetny
+    - trufla letnia
+    - trufla letnia
+    - trufla letnia
+    - "siedzu\u0144 sosnowy"
+    - "siedzu\u0144 sosnowy"
+    - "siedzu\u0144 sosnowy"
+    - "siedzu\u0144 sosnowy"
+    - "bu\u0142awka pa\u0142eczkowata"
   currentObjectiveIndex: 0
   currentMushroomsObjective: []
   dialogue: {fileID: 1122908920}
@@ -12420,7 +12420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Naci\u015Bnij E aby dokona\u0107 interakcji"
+  m_text: "Naci\u015Bnij E, aby dokona\u0107 interakcji"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
   m_sharedMaterial: {fileID: 2688865998205021192, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
