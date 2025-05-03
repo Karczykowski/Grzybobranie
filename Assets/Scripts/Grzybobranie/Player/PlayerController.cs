@@ -111,7 +111,7 @@ namespace Grzybobranie.Player
         {
             if (_objective.GetMushroomName() != null)
             {
-                if (closestShroom != null && closestShroom.name.Contains(_objective.GetMushroomName()))
+                if (closestShroom != null && closestShroom.name.ToLower().Contains(_objective.GetMushroomName()))
                 {
                     _objective.RemoveMushroomFromObjective();
                     _objective.GenerateObjective();
