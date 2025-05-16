@@ -4878,7 +4878,6 @@ MonoBehaviour:
     m_Bits: 64
   _objective: {fileID: 1538905734}
   mushroomPreview: {fileID: 1538905736}
-  popupDelayTime: 1.5
   fadeoutAnimator: {fileID: 35139426}
   highlightScale: 0.6
   wrongMushroomText: {fileID: 452989680}
@@ -5576,7 +5575,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538905734}
         m_TargetAssemblyTypeName: Grzybobranie.UI.Objective, Grzybobranie
-        m_MethodName: BackToMenu
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7914,7 +7913,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Menu G\u0142\xF3wne"
+  m_text: "Wyj\u015Bcie"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
   m_sharedMaterial: {fileID: 2688865998205021192, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
@@ -9142,7 +9141,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1538905734}
         m_TargetAssemblyTypeName: Grzybobranie.UI.Objective, Grzybobranie
-        m_MethodName: BackToMenu
+        m_MethodName: ExitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -12642,7 +12641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Menu G\u0142\xF3wne"
+  m_text: "Wyj\u015Bcie"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}
   m_sharedMaterial: {fileID: 2688865998205021192, guid: dd57b9d428efde24ba9ce0cb6c81cdb9, type: 2}

@@ -197,7 +197,11 @@ namespace Grzybobranie.UI
             ResetAllObjectives();
             gameTime = 0f;
         }
-
+           
+        public void ExitGame()
+        {
+            Application.Quit();
+        }
         public void BackToMenu()
         {
             SceneManager.LoadScene(0);

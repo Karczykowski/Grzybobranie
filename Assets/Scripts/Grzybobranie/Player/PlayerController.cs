@@ -12,7 +12,7 @@ namespace Grzybobranie.Player
         [SerializeField] private LayerMask mushroomLayerMask;
         [SerializeField] private UI.Objective _objective;
         [SerializeField] private UI.MushroomPreview mushroomPreview;
-        [SerializeField] private float popupDelayTime = 0f;
+        //[SerializeField] private float popupDelayTime = 0f;
         [SerializeField] private Animator fadeoutAnimator;
         [SerializeField] private float highlightScale;
         [SerializeField] TextMeshProUGUI wrongMushroomText;
@@ -34,7 +34,7 @@ namespace Grzybobranie.Player
         
         private void Update()
         {
-            closestShroom = Physics2D.OverlapCircle(transform.position, range, mushroomLayerMask);
+            closestShroom = GetClosestMushroom();
 
             if (previousShroom != null && previousShroom != closestShroom && isHighlighted)
             {
@@ -79,7 +79,25 @@ namespace Grzybobranie.Player
                 }
             }
         }
+                
+        public Collider2D GetClosestMushroom()
+        {
+            Collider2D[] mushrooms = Physics2D.OverlapCircleAll(transform.position, range, mushroomLayerMask);
 
+            Collider2D closest = null;
+            float minDistance = Mathf.Infinity;
+
+            foreach(var mushroom in mushrooms)
+            {
+                float distance = Vector2.Distance(transform.position, mushroom.transform.position);
+                if(distance < minDistance)
+                {
+                    minDistance = distance;
+                    closest = mushroom;
+                }
+            }
+            return closest;
+        }
         void HighlightMushroom(GameObject mushroom)
         {
             SpriteRenderer renderer = mushroom.GetComponent<SpriteRenderer>();
